@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from debug_toolbar.toolbar import debug_toolbar_urls
+from .views import home_view, contact_view, autores_view,editoriales_view, libros_view
 
 urlpatterns = [
+    path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
-]
+    path('',home_view),
+    path('contacto/',contact_view),
+    path('autores/',autores_view),
+    path('libros/',libros_view),
+    path('editoriales/',editoriales_view),
+
+] + debug_toolbar_urls()

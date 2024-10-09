@@ -1,4 +1,5 @@
 from django.db import models
+from simple_history.models import HistoricalRecords
 
 #Modelo par editoriales
 class Editorial(models.Model):
@@ -12,6 +13,7 @@ class Editorial(models.Model):
     email=models.EmailField()
     sitio_web =models.URLField()
     fecha_fundacion =models.DateField()
+    history= HistoricalRecords()
 
     def __str__(self):
         return self.nombre
