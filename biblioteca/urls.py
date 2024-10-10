@@ -25,10 +25,10 @@ from books.views import (
 )
 
 urlpatterns = [
+    path('',home_view, name='home'),
+    path('',include(('books.urls'), namespace='books')),
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
-    path('',home_view),
-    path('contacto/',contact_view),
-    path('', include('books.urls')),
+    path('contacta-con-nosotros/',contact_view, name='contacto'),
 
 ] + debug_toolbar_urls()

@@ -9,11 +9,11 @@
     <h1>Home Page</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil delectus aut ipsa aspernatur inventore pariatur consequatur. Sapiente unde voluptatum architecto inventore, iusto quia, quidem odit nam vero quis ex provident?</p>
     <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/contacto">Contacto</a></li>
-        <li><a href="/autores">Autores</a></li>
-        <li><a href="/libros">Libros</a></li>
-        <li><a href="/editoriales">Editoriales</a></li>
+        <li><a href="{%url 'home'%}">Inicio</a></li>
+        <li><a href="{%url 'contacto'%}">Contacto</a></li>
+        <li><a href="{%url 'books:autor_list'%}">Autores</a></li>
+        <li><a href="{%url 'books:libro_list'%}">Libros</a></li>
+        <li><a href="{%url 'books:editorial_list'%}">Editoriales</a></li>
 
     </ul>
 </body>

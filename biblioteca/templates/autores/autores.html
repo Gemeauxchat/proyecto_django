@@ -7,5 +7,10 @@
 </head>
 <body>
     <h1>Autores</h1>
+    <h1>{{ titulo }}</h1>
+    <h2>Lista de autores:</h2>
+    {%for autor in autores%}
+    <li>{{autor.id}}-{{autor.nombre}}</li>
+    {%endfor%}
 </body>
 </html>
